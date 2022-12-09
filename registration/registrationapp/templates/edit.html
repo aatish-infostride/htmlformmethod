@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}update profile{% endblock title %}
+{% block body %}
+
+<form action="{%url 'changepass'%}" method="POST">
+    {%csrf_token%}
+    <input type="password" name="old_pwd" placeholder="old Password">
+    <br><br>
+    <input type="password" name="new_pwd" placeholder="new Password">
+    <br><br>
+    <input type="submit" name="changepass" value="submit"> 
+
+</form>
+
+{% endblock %}
